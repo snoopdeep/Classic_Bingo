@@ -1,0 +1,21 @@
+.version-number {
+    position: fixed;
+    bottom: 15px;
+    left: 15px;
+    font-size: 14px;
+    color: #2c3e50;
+    z-index: 1000;
+    font-family: Arial, sans-serif;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 6px 12px;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(44, 62, 80, 0.2);
+    transition: opacity 0.3s ease;
+}
+
+.version-number:hover {
+    opacity: 1;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}

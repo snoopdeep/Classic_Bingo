@@ -1,0 +1,184 @@
+/* ============================================================================
+// FILE: css/game.css - Game Screen Styles (Updated, card styles removed)
+// ============================================================================ */
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.game-container {
+    min-height: 100vh;
+    background: #1a1a2e; 
+    padding: 15px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.game-title {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+.exit-game-btn {
+    padding: 8px 16px;
+    background: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 14px;
+}
+
+.exit-game-btn:hover {
+    background: #c82333;
+    transform: translateY(-2px);
+}
+
+.cards-grid {
+    display: grid;
+    gap: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Responsive card grid based on number of cards */
+.cards-grid.cards-1 {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.cards-grid.cards-2 {
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+.cards-grid.cards-3 {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.cards-grid.cards-4 {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 100%;
+    margin: 0 auto;
+    gap: 10px;
+}
+
+/* Specific adjustments for 4-card layout (targeting child elements) */
+.cards-grid.cards-4 .bingo-card-wrapper {
+    padding: 8px;
+    max-width: 100%;
+}
+
+.cards-grid.cards-4 .card-header {
+    font-size: 13px;
+    margin-bottom: 6px;
+}
+
+.cards-grid.cards-4 .column-header {
+    font-size: 11px;
+    padding: 5px;
+}
+
+.cards-grid.cards-4 .bingo-cell {
+    font-size: 13px;
+}
+
+.cards-grid.cards-4 .card-bingo-btn {
+    padding: 6px 12px;
+    font-size: 11px;
+}
+
+.cards-grid.cards-4 .checkmark {
+    font-size: 18px;
+}
+
+/* Tablet adjustments */
+@media (max-width: 1200px) {
+    .cards-grid.cards-3 {
+        grid-template-columns: repeat(2, 1fr);
+        max-width: 750px;
+    }
+    
+    .cards-grid.cards-3 > .bingo-card-wrapper:last-child {
+        grid-column: 1 / -1;
+        max-width: 360px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .game-container {
+        padding: 10px;
+    }
+    
+    .game-title {
+        font-size: 18px;
+    }
+    
+    .cards-grid.cards-2,
+    .cards-grid.cards-3,
+    .cards-grid.cards-4 {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+    }
+    
+    .cards-grid.cards-3 > .bingo-card-wrapper:last-child {
+        grid-column: 1;
+        max-width: 100%;
+    }
+    
+    /* Re-adding base styles for responsiveness that were specific to card elements */
+    .bingo-cell {
+        font-size: 14px;
+    }
+    
+    .column-header {
+        font-size: 12px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .bingo-card-wrapper {
+        padding: 10px;
+    }
+    
+    .card-header {
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    
+    .bingo-cell {
+        font-size: 12px;
+    }
+    
+    .checkmark {
+        font-size: 20px;
+    }
+    
+    .card-bingo-btn {
+        font-size: 12px;
+        padding: 7px 14px;
+    }
+}

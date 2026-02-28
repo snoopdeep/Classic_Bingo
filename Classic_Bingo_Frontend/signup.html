@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Bingo - Sign Up</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/signup.css">
+    <link rel="stylesheet" href="css/version.css">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Join Classic Bingo</h1>
+        <p class="subtitle">Choose your identity to start playing</p>
+        
+        <<form id="signup-form" onsubmit="return false;">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    placeholder="Enter your username (3-25 characters)"
+                    required
+                    autocomplete="off"
+                />
+            </div>
+            
+            <div class="form-group">
+                <label>Choose Your Avatar</label>
+                <div id="avatar-grid" class="avatar-grid"></div>
+            </div>
+            
+            <div id="error-message" class="error-message"></div>
+            
+            <button type="submit" id="signup-btn" class="btn btn-primary btn-block">
+                Continue to Bingo
+            </button>
+            
+            <p class="back-link">
+                <a href="/index.html">← Back to Home</a>
+            </p>
+        </form>
+    </div>
+
+    <script type="module">
+        import { SignupPage } from './js/app.js';
+        const signupPage = new SignupPage();
+        signupPage.init();
+</script>
+    <div class="version-number">v1.1.0</div>
+</body>
+</html>

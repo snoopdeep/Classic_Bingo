@@ -1,0 +1,140 @@
+/* // ============================================================================
+// FILE: css/modals.css - Game Modal Styles
+// ============================================================================ */
+
+.game-modal-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    animation: fadeIn 0.3s ease;
+}
+
+.game-modal-content {
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    animation: scaleIn 0.5s ease;
+}
+
+.modal-icon {
+    font-size: 80px;
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 32px;
+    margin: 0 0 10px 0;
+}
+
+.modal-title.win {
+    color: #28a745;
+}
+
+.modal-title.lose {
+    color: #dc3545;
+}
+
+.modal-message {
+    color: #666;
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.winner-details {
+    margin: 20px 0;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: left;
+}
+
+.winner-details-title {
+    font-weight: 600;
+    color: #555;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.winner-item {
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.winner-item:not(:last-child) {
+    border-bottom: 1px solid #ddd;
+}
+
+.winner-name {
+    font-weight: 600;
+    color: #333;
+}
+
+.winner-card-info {
+    color: #666;
+    font-size: 12px;
+    margin-left: 8px;
+}
+
+.winner-time {
+    color: #999;
+    font-size: 12px;
+}
+
+.modal-btn {
+    padding: 12px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    transition: all 0.3s;
+}
+
+.modal-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+}
+
+.warning-modal .modal-icon {
+    font-size: 60px;
+}
+
+.warning-modal .modal-title {
+    color: #dc3545;
+}
+
+.warning-modal .modal-btn {
+    background: #007bff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classic Bingo - Home</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/version.css">
+</head>
+<body>
+    <!-- Profile Section (Top Left) -->
+    <div id="profile-section" class="profile-container">
+        <div id="avatar-display"></div>
+        <div class="profile-info">
+            <h3 id="username-display">Guest</h3>
+            <p id="userId-display" class="user-id-text">Not logged in</p>
+        </div>
+    </div>
+
+    <!-- Settings Icon (Top Right) -->
+    <div id="settings-icon" class="settings-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M12 1v6m0 6v6m9-9h-6m-6 0H3"></path>
+         </svg>
+    </div>
+
+    <div class="version-number">v1.1.0</div>
+</body>
+</html>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <h1 class="game-title">Classic Bingo</h1>
+        
+        <!-- Start Game Button -->
+        <button id="start-game-btn" class="btn btn-primary btn-large">START NEW GAME</button>
+        
+        <!-- Signup Button (Hidden by default, shown only for guests) -->
+        <button id="show-signup-btn" class="btn btn-secondary btn-large" style="display: none;">SIGN UP TO PLAY</button>
+
+        <button id="show-manual-login-btn" class="btn btn-secondary btn-large" style="display: none; ">LOG IN WITH ID</button>
+        
+        <!-- Test Profile Button (For authenticated users) -->
+        <!-- <button id="get-profile-btn" class="btn btn-info" style="display: none;">View My Profile</button> -->
+    </div>
+
+    <!-- Exit Button (Bottom Right) -->
+    <button id="exit-btn" class="exit-btn">EXIT</button>
+
+    <!-- Version Number -->
+    <div class="version-number">v1.1.0</div>
+
+    <script type="module">
+        import { HomePage } from './js/app.js';
+        const homePage = new HomePage();
+        homePage.init();
+    </script>
+</body>
+</html>

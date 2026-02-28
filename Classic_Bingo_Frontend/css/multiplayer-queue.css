@@ -1,0 +1,181 @@
+/* // ============================================================================
+// FILE: css/multiplayer-queue.css - STYLING
+// ============================================================================ */
+
+.multiplayer-queue-container {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+.multiplayer-queue-container h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.card-selection {
+    background: rgba(255,255,255,0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 2rem;
+    min-width: 300px;
+}
+
+.card-selection label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.counter-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.counter-button {
+    background: rgba(255,255,255,0.3);
+    border: none;
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.counter-button:hover {
+    background: rgba(255,255,255,0.4);
+}
+
+.counter-display {
+    font-size: 2rem;
+    font-weight: bold;
+    min-width: 50px;
+}
+
+.matchmaking-status {
+    background: rgba(255,255,255,0.2);
+    padding: 40px;
+    border-radius: 15px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    border: 5px solid rgba(255,255,255,0.3);
+    border-top-color: white;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 20px;
+}
+
+.timer-display {
+    background: rgba(255,255,255,0.3);
+    padding: 20px;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.timer-display p {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.timer-display span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.players-waiting {
+    margin-top: 20px;
+    color: white;
+    text-align: center;
+}
+
+.player-item {
+    background: rgba(255,255,255,0.2);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    margin: 5px 0;
+    font-size: 1.1rem;
+}
+
+/* Button Styles */
+.btn-primary {
+    background: rgba(255,255,255,0.3);
+    color: white;
+    border: 2px solid white;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.btn-primary:hover:not(:disabled) {
+    background: white;
+    color: #667eea;
+    transform: translateY(-2px);
+}
+
+.btn-primary:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255,255,255,0.5);
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: white;
+}
+
+.back-btn {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    color: white;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 10px;
+}
+
+.back-btn:hover {
+    text-decoration: underline;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
