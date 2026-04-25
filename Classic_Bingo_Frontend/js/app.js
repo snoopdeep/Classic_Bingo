@@ -20,14 +20,14 @@ const CONFIG = {
     },
     // Avatars available for signup
     AVATARS: [
-        { id: 1, name: 'avatar1' },
-        { id: 2, name: 'avatar2' },
-        { id: 3, name: 'avatar3' },
-        { id: 4, name: 'avatar4' },
-        { id: 5, name: 'avatar5' },
-        { id: 6, name: 'avatar6' },
-        { id: 7, name: 'avatar7' },
-        { id: 8, name: 'avatar8' }
+        { id: 1, name: 'avatar_01' },
+        { id: 2, name: 'avatar_02' },
+        { id: 3, name: 'avatar_03' },
+        { id: 4, name: 'avatar_04' },
+        { id: 5, name: 'avatar_05' },
+        { id: 6, name: 'avatar_06' },
+        { id: 7, name: 'avatar_07' },
+        { id: 8, name: 'avatar_08' }
     ]
 };
 

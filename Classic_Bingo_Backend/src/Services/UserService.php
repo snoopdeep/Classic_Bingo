@@ -27,7 +27,7 @@ class UserService
             }
 
             // Validate avatar_id
-            $validAvatars = ['avatar_01', 'avatar_02', 'avatar_03', 'avatar_04', 'avatar_05'];
+            $validAvatars = ['avatar_01', 'avatar_02', 'avatar_03', 'avatar_04', 'avatar_05', 'avatar_06', 'avatar_07', 'avatar_08'];
             if (!in_array($data['avatar_id'], $validAvatars)) {
                 Response::json(['error' => 'Invalid avatar_id'], 400);
             }
