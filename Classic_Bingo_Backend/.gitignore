@@ -1,4 +1,14 @@
-.env 
-/vendor 
-composer.lock
-notes.txt
+.env
+
+# Composer dependencies
+/vendor
+
+
+# Personal notes 
+note.txt
+
+# Application logs
+/logs/
+
+# PHPUnit cache
+.phpunit.cache/

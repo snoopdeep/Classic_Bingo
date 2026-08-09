@@ -1,0 +1,18 @@
+# -----------------------------------------------------------------------------
+# JSON Web Token (JWT) Configuration
+# -----------------------------------------------------------------------------
+# This file contains all settings related to generating and validating JWTs.
+# For security, the secret key must be set via an environment variable in production.
+# -----------------------------------------------------------------------------
+
+# The secret key used to sign and verify all JWTs.
+# JWT_SECRET environment variable in production. The default value is insecure.
+secret: '${JWT_SECRET:default-secret-key-that-is-very-secure}'
+
+# The expiration time for access tokens in seconds.
+# Default is 900 seconds (15 minutes). Set via JWT_ACCESS_EXPIRATION env var.
+access_token_expiration: '${JWT_ACCESS_EXPIRATION:900}'
+
+# The expiration time for refresh tokens in seconds.
+# Default is 604800 seconds (7 days). Set via JWT_REFRESH_EXPIRATION env var.
+refresh_token_expiration: '${JWT_REFRESH_EXPIRATION:604800}'

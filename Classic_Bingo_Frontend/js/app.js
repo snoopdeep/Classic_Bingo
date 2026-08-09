@@ -12,10 +12,10 @@ const CONFIG = {
     LOADING_DURATION: 1000,
     // Endpoints referenced across frontend
     ENDPOINTS: {
-        SIGNUP: '/api/v1/auth/guest',
+        SIGNUP: '/api/v1/auth/signup',
         LOGIN: '/api/v1/auth/login', // Adjust if a different URL is required by backend
         LOGOUT: '/api/v1/auth/logout',
-        USER: '/api/v1/auth/user',
+        USER: '/api/v1/auth/users',
         REFRESH: '/api/v1/auth/refresh'
     },
     // Avatars available for signup

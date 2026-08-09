@@ -1,0 +1,25 @@
+# -----------------------------------------------------------------------------
+# Default Database Connection Settings
+# -----------------------------------------------------------------------------
+# These values are used to connect to the application database.
+# For security, sensitive data like the username and password should be provided
+# via environment variables in production environments.
+# -----------------------------------------------------------------------------
+
+# The database host. Default is '127.0.0.1'. Set via DB_HOST env var.
+host: '${DB_HOST:127.0.0.1}'
+
+# The database port. Default is 3306. Set via DB_PORT env var.
+port: '${DB_PORT:3306}'
+
+# The name of the database. Set via DB_DATABASE env var.
+dbname: '${DB_DATABASE:classic_bingo}'
+
+# The database user. Set via DB_USERNAME env var.
+user: '${DB_USERNAME:root}'
+
+# The database password. Set via DB_PASSWORD env var. Defaults to an empty string.
+password: '${DB_PASSWORD:}'
+
+# The character set for the connection.
+charset: 'utf8mb4'

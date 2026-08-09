@@ -1,6 +1,0 @@
-composer require firebase/php-jwt
-composer require vlucas/phpdotenv
-
-$userModel = new User(Database::getInstance()->getConnection());
-
-php -S localhost:8000 -t public

@@ -1,0 +1,7 @@
+# config/cache.yml
+scheme: tcp
+host: ${REDIS_HOST:127.0.0.1}
+port: ${REDIS_PORT:6379}
+password: ${REDIS_PASSWORD:}
+database: ${REDIS_DATABASE:0}
+timeout: 5
