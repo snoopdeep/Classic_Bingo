@@ -1,0 +1,97 @@
+# -----------------------------------------------------------------------------
+# Game Session Settings
+# -----------------------------------------------------------------------------
+# Defines the costs and timing for different game modes, also have the bingo match patterns
+# These values can be overridden for different environments if needed.
+# -----------------------------------------------------------------------------
+
+# Global call interval (seconds) - used across all game modes
+# call_interval: ${GAME_CALL_INTERVAL:4}
+call_interval: ${GAME_CALL_INTERVAL:7}
+
+# Game mode costs 
+modes:
+    vs_ai:
+        baseCost: 50
+        extraCardCost: 15
+        # callInterval: 4
+    pvp:
+        baseCost: 100
+        extraCardCost: 25
+        # callInterval: 4
+    
+
+# Bingo winning patterns - all winning square sets are consolidated here
+# as a simple array of arrays. A win is simply defined by matching any one of these sets. Static Rules. 
+patterns:
+  # Horizontal Lines (Rows) - indices 0-4
+  - [0, 1, 2, 3, 4]
+  - [5, 6, 7, 8, 9]
+  - [10, 11, 12, 13, 14]
+  - [15, 16, 17, 18, 19]
+  - [20, 21, 22, 23, 24]
+  
+  # Vertical Lines (Columns) - indices 5-9
+  - [0, 5, 10, 15, 20]
+  - [1, 6, 11, 16, 21]
+  - [2, 7, 12, 17, 22]
+  - [3, 8, 13, 18, 23]
+  - [4, 9, 14, 19, 24]
+  
+  # Diagonals - indices 10-11
+  - [0, 6, 12, 18, 24]
+  - [4, 8, 12, 16, 20]
+  
+  # Four Corners - index 12
+  - [0, 4, 20, 24]
+
+
+  # Pattern metadata - maps pattern types to their indices in the patterns array above
+pattern_metadata:
+  standard:
+    name: 'Standard 5-in-a-Row'
+    description: 'Any horizontal, vertical, or diagonal line'
+    indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  # All rows (0-4), columns (5-9), diagonals (10-11)
+  
+  four_corners:
+    name: 'Four Corners'
+    description: 'All four corner squares'
+    indices: [12]  # Index 12 in patterns array
+  
+  all_patterns:
+    name: 'All Patterns'
+    description: 'Any valid bingo pattern (used for competitive modes)'
+    indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  # All patterns
+
+  # Future patterns can be added here:
+  # blackout:
+  #   name: 'Blackout'
+  #   description: 'All 25 squares'
+  #   indices: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  
+  # postage_stamp:
+  #   name: 'Postage Stamp'
+  #   description: '2x2 square in any corner'
+  #   indices: [13, 14, 15, 16]  # You'd add these patterns to the patterns array first
+
+# Practice mode settings
+practice:
+  enabled: true
+  default_pattern: 'standard'
+  default_ball_speed: 'normal'
+  default_auto_daub: false
+  max_cards: 4
+  
+  # Ball speed options (milliseconds between calls)
+  ball_speeds:
+    relaxed: 8000
+    normal: 4000
+    fast: 2000
+    turbo: 1000
+  
+  # Available patterns for practice mode (subset of pattern_metadata keys)
+  available_patterns:
+    - standard
+    - four_corners
+
+    

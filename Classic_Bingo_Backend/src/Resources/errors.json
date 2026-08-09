@@ -1,0 +1,133 @@
+[
+  {
+    "code": "ERR_00_INFRA_UNEXPECTED",
+    "status": 500,
+    "message": "An unexpected server error occurred."
+  },
+  {
+    "code": "ERR_00_INFRA_DATABASE",
+    "status": 500,
+    "message": "A database error occurred."
+  },
+  {
+    "code": "ERR_00_ROUTING_NOT_FOUND",
+    "status": 404,
+    "message": "The requested API route does not exist."
+  },
+  {
+  "code": "ERR_00_INFRA_CACHE_CONNECTION",
+  "status": 500,
+  "message": "Failed to connect to cache service."
+  },
+  {
+    "code": "ERR_01_AUTH_ACCESS_TOKEN_MISSING",
+    "status": 401,
+    "message": "Authentication token was not provided."
+  },
+  {
+    "code": "ERR_01_AUTH_ACCESS_TOKEN_EXPIRED", 
+    "status": 401,
+    "message": "The authentication token has expired and requires a refresh."
+  },
+  {
+    "code": "ERR_01_AUTH_ACCESS_TOKEN_INVALID",
+    "status": 401,
+    "message": "Authentication token is invalid or has expired."
+  },
+  {
+    "code": "ERR_01_AUTH_REFRESH_TOKEN_MISSING",
+    "status": 401,
+    "message": "Refresh token not found."
+  },
+  {
+    "code": "ERR_01_AUTH_REFRESH_TOKEN_INVALID",
+    "status": 403,
+    "message": "The refresh token is invalid or has been revoked."
+  },
+  {
+    "code": "ERR_01_AUTH_FORBIDDEN",
+    "status": 403,
+    "message": "User does not have permission to access this resource."
+  },
+  {
+    "code": "ERR_01_AUTH_USERNAME_TAKEN",
+    "status": 409,
+    "message": "The requested username is already taken."
+  },
+  {
+    "code": "ERR_01_AUTH_UNAUTHORIZED",
+    "status": 401,
+    "message": "Authentication is required."
+  },
+  {
+    "code": "ERR_01_AUTH_MISSING_SIGNATURE",
+    "status": 400,
+    "message": "Request is missing the X-Signature header."
+  },
+  {
+    "code": "ERR_01_AUTH_INVALID_SIGNATURE",
+    "status": 403,
+    "message": "The provided signature is invalid."
+  },
+  {
+    "code": "ERR_01_AUTH_INVALID_CREDENTIALS",
+    "status": 403,
+    "message": "Invalid credentials for signature verification."
+  },
+  {
+    "code": "ERR_02_VALIDATION_MISSING_FIELDS",
+    "status": 400,
+    "message": "One or more required fields are missing."
+  },
+  {
+    "code": "ERR_02_VALIDATION_USERNAME_FORMAT",
+    "status": 400,
+    "message": "The provided username has an invalid format."
+  },
+  {
+    "code": "ERR_02_VALIDATION_AVATAR_INVALID",
+    "status": 400,
+    "message": "The provided avatar ID is invalid."
+  },
+  {
+    "code": "ERR_02_VALIDATION_USER_ID_MISSING",
+    "status": 400,
+    "message": "A user ID is required for this operation."
+  },
+  {
+    "code": "ERR_03_RESOURCE_USER_NOT_FOUND",
+    "status": 404,
+    "message": "The specified user was not found."
+  },
+  {
+    "code": "ERR_04_GAME_INVALID_BINGO_CALL",
+    "status": 400,
+    "message": "Invalid bingo call. The number is out of range or already called."
+  },
+  {
+    "code": "ERR_04_GAME_NO_BINGO",
+    "status": 400,
+    "message": "No valid bingo pattern was found on the submitted card."
+  },
+  {
+    "code": "ERR_04_GAME_SESSION_NOT_FOUND",
+    "status": 404,
+    "message": "The requested game session was not found."
+  },
+  {
+    "code": "ERR_04_GAME_INSUFFICIENT_FUNDS",
+    "status":400,
+    "message": "Inefficent Coins."
+
+  },  
+  {
+    "code": "ERR_02_GAME_INVALID_REQUEST",
+    "status": 400,
+    "message": "Invalid game request parameters."
+  },
+   {
+    "code": "ERR_02_GAME_MODE_UNSUPPORTED",
+    "status": 400,
+    "message": "The requested game mode is not supported."
+  }
+]

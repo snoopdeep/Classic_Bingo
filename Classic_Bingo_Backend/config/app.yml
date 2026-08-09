@@ -1,0 +1,7 @@
+# -----------------------------------------------------------------------------
+# General Application Configuration
+# -----------------------------------------------------------------------------
+# This file contains application-level settings.
+# Values can be overridden by environment variables using the ${VAR_NAME:default} syntax.
+# -----------------------------------------------------------------------------
+secret: '${GLOBAL_API_SECRET:default-insecure-secret-key-for-dev-only}'

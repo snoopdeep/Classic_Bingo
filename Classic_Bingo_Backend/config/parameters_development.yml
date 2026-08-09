@@ -1,0 +1,16 @@
+# -----------------------------------------------------------------------------
+# Development Environment Overrides
+# -----------------------------------------------------------------------------
+# This file is loaded ONLY when the APP_ENV environment variable is set to
+# 'development'. Any values defined here will override the default settings
+# from the base configuration files (e.g., database.yml, app.yml, jwt.yml).
+#
+# -----------------------------------------------------------------------------
+
+# --- EXAMPLE ---
+# To use a different database for development, you can uncomment the following
+# lines. This will make the application connect to 'classic_bingo_dev'
+# instead of the database defined in database.yml when APP_ENV=development.
+
+# database:
+#   dbname: 'classic_bingo_dev'
